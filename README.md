@@ -3,27 +3,57 @@
 - Computer Engineering 컴퓨터공학과
 - 팀장 김현근, 팀원 김다예, 김동건, 조지형, 황규만
 
-# Fancy Teapot with Lighting and Smoke (OpenGL + FreeGLUT)
+# 🌈 조명과 연기가 있는 화려한 3D 주전자 (OpenGL + FreeGLUT)
 
-A colorful 3D teapot visualization built using **OpenGL** and **FreeGLUT**, featuring:
-- Smooth real-time rotation
-- Interactive camera controls
-- Dynamic lighting
-- Color-cycling teapot
-- Rising smoke particles
-
-## ✨ Features
-
-- 🫖 3D teapot with smooth shading and dynamic lighting
-- 🎨 Rainbow color transitions via HSV → RGB
-- 💨 Smoke particles gently rising from the teapot
-- 🌀 Mouse drag to rotate view
-- 🔍 Mouse wheel zoom in/out
-- 🔄 `R` key toggles auto-rotation on/off
+**OpenGL**과 **FreeGLUT**을 사용하여 만든 화려한 3D 주전자 시각화입니다.  
+실시간으로 회전하며, 색상이 부드럽게 변하고, 위로 피어오르는 연기 입자가 더해져 시각적으로 풍부한 효과를 제공합니다.
 
 ---
 
-## 🛠️ Requirements
+## ✨ 주요 기능
 
-- **OpenGL** //그래픽 라이브러리
-- **FreeGLUT** 
+- 🫖 부드러운 음영 처리와 동적 조명이 적용된 3D 주전자
+- 🎨 HSV → RGB 변환을 이용한 색상 변화 (무지개 효과)
+- 💨 주전자에서 천천히 떠오르는 반투명 연기 입자
+- 🌀 마우스 드래그를 통해 카메라 시점 회전
+- 🔍 마우스 휠로 확대/축소
+- 🔄 `R` 키를 눌러 자동 회전 on/off 전환 가능
+
+---
+
+## 🛠️ 요구 사항
+
+- **OpenGL**  
+  그래픽 렌더링을 위한 핵심 라이브러리
+
+- **FreeGLUT**  
+  창 생성 및 마우스/키보드 이벤트 처리를 위한 OpenGL 유틸리티 라이브러리
+
+---
+
+## 🧪 실행 방법
+
+1. OpenGL 및 FreeGLUT 개발 환경이 설정된 상태에서 `.cpp` 파일을 컴파일하세요.
+2. 실행 시 자동 회전이 활성화되며, 마우스 및 키보드를 통해 시점을 조작할 수 있습니다.
+
+---
+
+## 🎮 조작법 요약
+
+| 입력 | 동작 |
+|------|------|
+| 마우스 좌클릭 + 드래그 | 시점 회전 |
+| 마우스 휠 | 확대 / 축소 |
+| `R` 키 | 자동 회전 on/off 전환 |
+
+---
+
+## 📸 미리보기
+
+> 💡 실행 결과로 보여지는 주전자는 부드럽게 회전하며, 무지개 색상으로 변화합니다. 주전자 위로는 연기 입자가 자연스럽게 떠오릅니다.
+
+---
+
+## 📝 참고
+
+이 프로젝트는 그래픽스 기초 및 실시간 렌더링, 색상 처리, 인터랙션 기능을 연습하기 위한 목적의 예제입니다.
