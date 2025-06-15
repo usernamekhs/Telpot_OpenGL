@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<FreeGlutBuildConfig>
+		</FreeGlutBuildConfig>
+		<FreeGlutBuildConfig Condition="($(Configuration.ToLower().IndexOf('debug')) &gt; -1)">Debug</FreeGlutBuildConfig>
+		<FreeGlutBuildConfig Condition="$(Configuration.ToLower().IndexOf('debug')) == -1">Release</FreeGlutBuildConfig>
+		<FreeGlutBuildSuffix>
+		</FreeGlutBuildSuffix>
+		<FreeGlutBuildSuffix Condition="'$(FreeGlutBuildConfig)' == 'Debug'">d</FreeGlutBuildSuffix>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ClCompile>
+		<Link>
+			<AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>freeglut$(FreeGlutBuildSuffix).lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+	<Target Name="FreeGlut_redist_AfterBuild" AfterTargets="AfterBuild">
+		<ItemGroup>
+			<FreeGlutDllFiles Include="$(MSBuildThisFileDirectory)\$(Platform)\bin\freeglut$(FreeGlutBuildSuffix).dll" />
+		</ItemGroup>
+		<Copy SourceFiles="@(FreeGlutDllFiles)" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+	</Target>
+</Project>
