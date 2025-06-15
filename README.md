@@ -3,7 +3,7 @@
 - Computer Engineering 컴퓨터공학과
 - 팀장 김현근, 팀원 김다예, 김동건, 조지형, 황규만
 
-# 🌈 Fancy Teapot with Lighting and Smoke (OpenGL + FreeGLUT)
+# Fancy Teapot with Lighting and Smoke (OpenGL + FreeGLUT)
 
 A colorful 3D teapot visualization built using **OpenGL** and **FreeGLUT**, featuring:
 - Smooth real-time rotation
