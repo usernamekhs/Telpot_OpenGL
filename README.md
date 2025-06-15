@@ -1,4 +1,4 @@
-#Telpot_OpenGL
+# Telpot_OpenGL
 - Andong National Universty 국립 안동대학교 
 - Computer Engineering 컴퓨터공학과
 - 팀장 김현근, 팀원 김다예, 김동건, 조지형, 황규만
